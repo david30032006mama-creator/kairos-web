@@ -103,4 +103,109 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+                                                                       </html><!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kairós & Co. — Accesorios para hombre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#inicio" class="logo">KAIRÓS <span>& Co.</span></a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <h1>El momento correcto. El detalle correcto.</h1>
+        <p>Kairós & Co. crea accesorios para el hombre que entiende que los detalles hablan por él: relojes, corbatas, billeteras y cinturones pensados para durar.</p>
+        <a href="#catalogo" class="boton">Ver catálogo</a>
+      </div>
+      <img class="hero-imagen" src="https://placehold.co/500x500/0d0d0d/c9a227?text=Kair%C3%B3s+%26+Co." alt="Reloj de pulsera negro con detalles dorados sobre fondo oscuro, imagen representativa de la marca Kairós">
+    </section>
+
+    <section id="catalogo" class="catalogo">
+      <h2>Nuestro catálogo</h2>
+
+      <div class="filtros" id="filtros">
+        <button data-categoria="todos" class="filtro activo">Todos</button>
+        <button data-categoria="relojes" class="filtro">Relojes</button>
+        <button data-categoria="corbatas" class="filtro">Corbatas</button>
+        <button data-categoria="billeteras" class="filtro">Billeteras</button>
+        <button data-categoria="cinturones" class="filtro">Cinturones</button>
+      </div>
+
+      <div class="productos" id="productos">
+        <!-- Las tarjetas de producto se generan dinámicamente con JavaScript -->
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <div class="contacto-info">
+        <h2>Haz tu pedido</h2>
+        <p>Cuéntanos qué buscas y te contactamos para coordinar el pago y la entrega en Barranquilla o el envío a tu ciudad.</p>
+      </div>
+
+      <form id="formulario-contacto" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="campo">
+          <label for="producto">Producto de interés</label>
+          <select id="producto" name="producto" required>
+            <option value="">Selecciona una opción</option>
+            <option value="relojes">Relojes</option>
+            <option value="corbatas">Corbatas</option>
+            <option value="billeteras">Billeteras</option>
+            <option value="cinturones">Cinturones</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha preferida de contacto</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div class="campo campo-checkbox">
+          <input type="checkbox" id="terminos" name="terminos" required>
+          <label for="terminos">Acepto ser contactado por WhatsApp o correo</label>
+        </div>
+
+        <button type="submit" class="boton">Enviar solicitud</button>
+
+        <p id="mensaje-formulario" class="mensaje-formulario" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Kairós & Co. — Barranquilla, Colombia</p>
+    <p>Síguenos en Instagram <a href="https://instagram.com/co_kairos" target="_blank" rel="noopener">@co_kairos</a></p>
+    <p>&copy; <span id="anio"></span> Kairós & Co. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+                               </html>
