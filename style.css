@@ -1,0 +1,299 @@
+:root {
+  --negro: #0d0d0d;
+  --gris-oscuro: #1a1a1a;
+  --dorado: #c9a227;
+  --crema: #f5f0e6;
+  --texto-claro: #e8e4d8;
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-texto: 'Inter', sans-serif;
+  --radio: 6px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  background-color: var(--negro);
+  color: var(--texto-claro);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  color: var(--crema);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radio);
+}
+
+a {
+  color: var(--dorado);
+  text-decoration: none;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--dorado);
+  color: var(--negro);
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #e0b93a;
+}
+
+/* Header y navegación */
+.site-header {
+  background-color: var(--negro);
+  border-bottom: 1px solid var(--gris-oscuro);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  color: var(--crema);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--dorado);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--texto-claro);
+}
+
+.nav-links a:hover {
+  color: var(--dorado);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.hero-texto h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-texto p {
+  margin-bottom: 1.5rem;
+  max-width: 60ch;
+}
+
+.hero-imagen {
+  flex: 1;
+  max-width: 350px;
+}
+
+/* Catálogo */
+.catalogo {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.catalogo h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.filtro {
+  background: transparent;
+  border: 1px solid var(--dorado);
+  color: var(--dorado);
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radio);
+  cursor: pointer;
+  font-family: var(--fuente-texto);
+}
+
+.filtro:hover,
+.filtro.activo {
+  background-color: var(--dorado);
+  color: var(--negro);
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.producto {
+  background-color: var(--gris-oscuro);
+  border-radius: var(--radio);
+  overflow: hidden;
+  width: 240px;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+}
+
+.producto-info {
+  padding: 1rem;
+}
+
+.producto-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.producto-info p {
+  font-size: 0.9rem;
+  color: var(--texto-claro);
+  margin-bottom: 0.6rem;
+}
+
+.producto-precio {
+  color: var(--dorado);
+  font-weight: 500;
+}
+
+/* Contacto */
+.contacto {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.contacto-info,
+.formulario {
+  flex: 1;
+  min-width: 280px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  background-color: var(--gris-oscuro);
+  border: 1px solid #333;
+  color: var(--texto-claro);
+  padding: 0.6rem;
+  border-radius: var(--radio);
+  font-family: var(--fuente-texto);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--dorado);
+}
+
+.mensaje-formulario {
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.mensaje-formulario.exito {
+  color: #7fbf7f;
+}
+
+.mensaje-formulario.error {
+  color: #e07a7a;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--gris-oscuro);
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--dorado);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-imagen {
+    max-width: 250px;
+  }
+
+  .contacto {
+    flex-direction: column;
+  }
+}
