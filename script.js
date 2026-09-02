@@ -130,4 +130,24 @@ formulario.addEventListener('submit', (evento) => {
   mensajeFormulario.classList.add('exito');
 
   formulario.reset();
+});formulario.addEventListener('submit', (evento) => {
+  evento.preventDefault();
+
+  const nombre = document.querySelector('#nombre').value.trim();
+  const correo = document.querySelector('#correo').value.trim();
+  const producto = document.querySelector('#producto').value;
+  const terminos = document.querySelector('#terminos').checked;
+
+  if (!nombre || !correo || !producto || !terminos) {
+    mensajeFormulario.textContent = 'Por favor completa los campos obligatorios antes de enviar.';
+    mensajeFormulario.classList.remove('exito');
+    mensajeFormulario.classList.add('error');
+    return;
+  }
+
+  mensajeFormulario.textContent = `Gracias, ${nombre}. Te contactaremos pronto al correo ${correo}.`;
+  mensajeFormulario.classList.remove('error');
+  mensajeFormulario.classList.add('exito');
+
+  formulario.reset();
 });
